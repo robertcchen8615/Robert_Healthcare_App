@@ -9,6 +9,8 @@ This repository currently defines the first implementation baseline for the DaXi
 - `WorkDo` for attendance, leave, reimbursement, and internal communication
 - `n8n` for cross-system automation, scheduling, export, notification, and backup orchestration
 
+In addition to the active integration baseline, this repository now carries a discovery track for AI-assisted home nursing workflows based on field input from the Chimei home nursing presentation stored under `docs/attachments/chimei/`.
+
 ## System Architecture
 
 ### Core Systems
@@ -96,6 +98,29 @@ Outputs:
 - backup logs
 - failure notifications
 
+### Workflow C: AI-Assisted Documentation Discovery Track
+
+Status:
+- research and future-phase discovery only
+
+Motivating input:
+- field evidence from the Chimei home nursing AI presentation
+
+Candidate flow:
+1. Capture visit observations through voice or structured quick input
+2. Convert voice to transcript
+3. Generate a nursing note draft
+4. Generate a care-plan draft
+5. Generate patient education draft content when appropriate
+6. Require nurse review and correction
+7. Save reviewed content into the target record system or export workflow
+
+Expected value:
+- reduce documentation burden
+- reduce recall dependency after visits
+- improve consistency of note structure
+- support reminder and productivity analytics
+
 ## Data and Integrations
 
 ### Expected Integration Pattern
@@ -116,6 +141,15 @@ Outputs:
 - `neoCare`
   - API if available
   - otherwise scheduled `CSV` or `PDF` export workflow
+
+### Future AI Input Artifacts
+
+- visit voice recording
+- transcript
+- AI-generated nursing note draft
+- AI-generated care-plan draft
+- AI-generated patient education draft
+- review metadata for who edited and approved generated content
 
 ### Repository Artifacts
 
@@ -139,6 +173,7 @@ Outputs:
 - Backup workflow failures must trigger an alert
 - Credential expiry should be reviewed on a fixed schedule
 - Payroll and backup outputs should be logged for traceability
+- Future AI-assisted workflows should log generation events, review events, and finalization events
 
 ## Security and Compliance
 
@@ -146,6 +181,8 @@ Outputs:
 - Preserve auditability for payroll calculation and backup execution
 - Align backup retention with long-term care record retention expectations
 - Avoid unnecessary duplication of sensitive data beyond required outputs and backups
+- Treat any future voice capture and generated clinical content as privacy-sensitive artifacts
+- Require human review before generated clinical content is treated as finalized documentation
 
 ## Delivery Phases
 
@@ -163,3 +200,6 @@ Outputs:
 - What payroll rules must be parameterized versus hard-coded in workflow logic?
 - What exact storage destination will DaXin use in production: NAS, Google Drive, or both?
 - What review and signoff process will DaXin use for payroll exceptions?
+- Should AI-assisted documentation remain a research track, or enter the next delivery phase?
+- What consent, retention, and review policy would apply to visit voice capture?
+- What minimum clinical review standard is required before generated notes can be used operationally?

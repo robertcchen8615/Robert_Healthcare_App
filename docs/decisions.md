@@ -10,6 +10,7 @@
 | 2026-02-21 | Use self-hosted `n8n` as the integration and automation layer | This minimizes license cost and keeps data handling under customer control | Project team | Confirm hosting target, credentials, and operational ownership |
 | 2026-02-21 | Deliver the project in three phases | Phase delivery reduces risk and aligns with payroll-first business priorities | Project manager | Keep milestones synchronized with customer and vendors |
 | 2026-04-05 | Treat this repository as the source of truth for finalized proposal content | ChatGPT discussions and project materials need a stable home for implementation and PR-based collaboration | Repository owner | Keep requirements, spec, and decisions updated when scope changes |
+| 2026-04-05 | Treat Chimei home nursing AI material as a discovery input, not current delivery scope | The PDF provides strong field evidence for future AI-assisted documentation ideas, but it does not by itself validate deployability for the current customer engagement | Repository owner | Track AI-assisted documentation as a future capability area |
 
 ## Current Working Assumptions
 
@@ -17,9 +18,11 @@
 - Payroll automation is the first operational priority
 - Daily backup and compliance support are the second operational priority
 - Vendor documentation collected under `docs/attachments/daxin/` is reference material, not a substitute for final signed vendor commitments
+- Chimei material under `docs/attachments/chimei/` is a product discovery input for future workflow design
 
 ## Pending Decisions
 
 - Final GitHub workflow for feature branches and PR reviews
 - Whether customer-facing deliverables should also be versioned as PDF exports on each milestone
 - Whether a separate environment document is needed for production deployment details
+- Whether AI-assisted documentation should become phase-two product scope or remain research-only

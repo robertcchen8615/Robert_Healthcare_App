@@ -20,6 +20,7 @@ The DaXin engagement focuses on reducing fragmented operations across home nursi
 - Support payroll automation in time for HR operations
 - Build a daily backup process for medical and care records with auditability
 - Keep the finalized project scope, requirements, and decisions synchronized in this repository
+- Build a discovery track for AI-assisted home nursing workflows informed by real field evidence
 
 ## Users
 
@@ -37,6 +38,7 @@ The DaXin engagement focuses on reducing fragmented operations across home nursi
 - In scope: define requirements for the target system architecture and workflows
 - In scope: payroll integration workflow using WorkDo plus neoCare and JUBO scheduling data
 - In scope: daily backup workflow for nursing records and care service records
+- In scope: analyze field evidence and domain inputs for future AI-assisted home nursing capabilities
 - In scope: project documentation for planning, implementation, testing, and customer communication
 - Out of scope: replacing `neoCare` as the home nursing core system
 - Out of scope: building a custom EMR or replacing all third-party operational systems
@@ -56,6 +58,16 @@ The DaXin engagement focuses on reducing fragmented operations across home nursi
 - The system shall organize backup outputs by year, month, and case or worker grouping
 - The system shall maintain backup logs and generate failure alerts
 
+## Future Capability Requirements
+
+- The system should support nurse-friendly capture during or immediately after home visits
+- The system should reduce reliance on memory for post-visit documentation
+- The system should support voice-to-text as a candidate input channel for clinical note drafting
+- The system should generate editable drafts for nursing notes and care plans rather than locked final records
+- The system should support clinician review and correction before any generated content is finalized
+- The system should support reminders for incomplete records before compliance deadlines
+- The system should support operational indicators such as documentation time, service time, and travel time
+
 ## Non-Functional Requirements
 
 - The integration approach should minimize operational disruption and system replacement risk
@@ -63,6 +75,7 @@ The DaXin engagement focuses on reducing fragmented operations across home nursi
 - The system should support auditable outputs for payroll and backup activities
 - Backup processes should align with regulatory retention expectations for long-term care records
 - Documentation in this repository should be sufficient for handoff and PR-based collaboration
+- Any future AI-assisted documentation capability should preserve human review, traceability, and privacy controls
 
 ## Success Metrics
 
@@ -71,6 +84,12 @@ The DaXin engagement focuses on reducing fragmented operations across home nursi
 - Alerting is triggered within 30 minutes of backup failure
 - WorkDo attendance coverage reaches at least 95%
 - Finalized requirements, specs, and decisions are maintained in repo documents
+
+## Discovery Metrics
+
+- Establish baseline documentation time before any AI-assisted workflow pilot
+- Define measurable hypotheses for note drafting, care plan generation, and reminder effectiveness
+- Validate whether field-inspired AI workflow ideas should enter the next implementation phase
 
 ## Milestones
 
