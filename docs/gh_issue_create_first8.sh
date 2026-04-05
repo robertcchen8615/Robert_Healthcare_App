@@ -1,15 +1,41 @@
 #!/bin/zsh
 
-# Usage:
-# 1. Review and edit labels if needed
-# 2. Make sure gh is authenticated
-# 3. Run commands one by one, or copy the specific issue you want
+set -euo pipefail
 
 REPO="robertcchen8615/Robert_Healthcare_App"
 
-gh issue create --repo "$REPO" \
-  --title "T001 Confirm active customer scope baseline" \
-  --body-file - <<'EOF'
+usage() {
+  cat <<'EOF'
+Usage:
+  ./docs/gh_issue_create_first8.sh <ISSUE_ID>
+
+Example:
+  ./docs/gh_issue_create_first8.sh T001
+
+Available issue ids:
+  T001 T002 T301 T101 T102 T103 T104 T201
+
+Before running:
+  1. Authenticate GitHub CLI with: gh auth login
+  2. Optionally verify auth with: gh auth status
+EOF
+}
+
+require_gh_auth() {
+  if ! gh auth status >/dev/null 2>&1; then
+    echo "GitHub CLI is not authenticated. Run: gh auth login"
+    exit 1
+  fi
+}
+
+create_issue() {
+  local issue_id="$1"
+
+  case "$issue_id" in
+    T001)
+      gh issue create --repo "$REPO" \
+        --title "T001 Confirm active customer scope baseline" \
+        --body-file - <<'EOF'
 ## Purpose
 Lock the DaXin delivery scope as the active implementation baseline.
 
@@ -31,10 +57,11 @@ none
 ## Done When
 - all three files reflect the same customer scope and workflow priorities
 EOF
-
-gh issue create --repo "$REPO" \
-  --title "T002 Convert open questions into owner-based checklist" \
-  --body-file - <<'EOF'
+      ;;
+    T002)
+      gh issue create --repo "$REPO" \
+        --title "T002 Convert open questions into owner-based checklist" \
+        --body-file - <<'EOF'
 ## Purpose
 Make unresolved requirements actionable rather than implicit.
 
@@ -54,10 +81,11 @@ Project owner or PM
 ## Done When
 - open questions around API access, storage destination, migration scope, and payroll rules have named owners
 EOF
-
-gh issue create --repo "$REPO" \
-  --title "T301 Build vendor dependency tracker" \
-  --body-file - <<'EOF'
+      ;;
+    T301)
+      gh issue create --repo "$REPO" \
+        --title "T301 Build vendor dependency tracker" \
+        --body-file - <<'EOF'
 ## Purpose
 Centralize all external dependencies for implementation readiness.
 
@@ -76,10 +104,11 @@ PM or operations lead
 ## Done When
 - the team can see which external dependency blocks which delivery task
 EOF
-
-gh issue create --repo "$REPO" \
-  --title "T101 Confirm WorkDo integration method" \
-  --body-file - <<'EOF'
+      ;;
+    T101)
+      gh issue create --repo "$REPO" \
+        --title "T101 Confirm WorkDo integration method" \
+        --body-file - <<'EOF'
 ## Purpose
 Determine whether WorkDo data will be obtained through API, export, or both.
 
@@ -101,10 +130,11 @@ IT lead
 ## Done When
 - the source, authentication method, and expected output fields are documented
 EOF
-
-gh issue create --repo "$REPO" \
-  --title "T102 Confirm JUBO scheduling data source" \
-  --body-file - <<'EOF'
+      ;;
+    T102)
+      gh issue create --repo "$REPO" \
+        --title "T102 Confirm JUBO scheduling data source" \
+        --body-file - <<'EOF'
 ## Purpose
 Define how scheduling or service data is retrieved from JUBO.
 
@@ -125,10 +155,11 @@ IT lead or home-care systems owner
 ## Done When
 - JUBO source method and required fields are documented
 EOF
-
-gh issue create --repo "$REPO" \
-  --title "T103 Confirm neoCare scheduling data source" \
-  --body-file - <<'EOF'
+      ;;
+    T103)
+      gh issue create --repo "$REPO" \
+        --title "T103 Confirm neoCare scheduling data source" \
+        --body-file - <<'EOF'
 ## Purpose
 Define whether neoCare exposes API access or requires export-based integration.
 
@@ -149,10 +180,11 @@ IT lead or nursing systems owner
 ## Done When
 - the approved source pattern for neoCare is documented
 EOF
-
-gh issue create --repo "$REPO" \
-  --title "T104 Define payroll data mapping" \
-  --body-file - <<'EOF'
+      ;;
+    T104)
+      gh issue create --repo "$REPO" \
+        --title "T104 Define payroll data mapping" \
+        --body-file - <<'EOF'
 ## Purpose
 Map attendance, leave, and schedule data into a unified payroll input model.
 
@@ -176,10 +208,11 @@ Business analyst or integration lead
 ## Done When
 - the team can explain how raw inputs become payroll-ready records
 EOF
-
-gh issue create --repo "$REPO" \
-  --title "T201 Confirm neoCare record export method" \
-  --body-file - <<'EOF'
+      ;;
+    T201)
+      gh issue create --repo "$REPO" \
+        --title "T201 Confirm neoCare record export method" \
+        --body-file - <<'EOF'
 ## Purpose
 Define how nursing records will be retrieved for backup.
 
@@ -201,3 +234,19 @@ IT lead or nursing systems owner
 ## Done When
 - record format, export timing, and retrieval method are documented
 EOF
+      ;;
+    *)
+      echo "Unknown issue id: $issue_id"
+      usage
+      exit 1
+      ;;
+  esac
+}
+
+if [[ $# -ne 1 ]]; then
+  usage
+  exit 1
+fi
+
+require_gh_auth
+create_issue "$1"
