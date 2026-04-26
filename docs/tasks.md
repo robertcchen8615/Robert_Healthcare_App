@@ -349,6 +349,180 @@ Dependencies:
 Done when:
 - customer-facing materials and repo documentation reflect the same project baseline
 
+## P5: IoT Health Monitoring
+
+### T501: Resolve IoT scope open questions
+
+Purpose:
+- confirm device vendor, platform approach, data residency, and mobile app target before implementation begins
+
+Outputs:
+- answers to all IoT open questions listed in `spec.md`
+- decision log entries for vendor selection and platform approach
+
+Dependencies:
+- T002
+
+Done when:
+- device vendor, platform, residency, and app platform are confirmed and documented
+
+### T502: Select and document IoT device vendor
+
+Purpose:
+- choose the Bluetooth medical device vendor(s) for blood pressure, blood glucose, SpO2, temperature, and weight
+
+Outputs:
+- vendor selection note with supported device models and Bluetooth SDK details
+- stored under `docs/attachments/iot/`
+
+Dependencies:
+- T501
+
+Done when:
+- at least one vendor per measurement type is confirmed with SDK documentation available
+
+### T503: Define IoT Health Platform data model
+
+Purpose:
+- specify the schema for measurement records, threshold configurations, alert events, and family access rules
+
+Outputs:
+- data model document covering all IoT Health Platform entities
+
+Dependencies:
+- T502
+
+Done when:
+- the data model is complete enough to implement the storage layer and APIs
+
+### T504: Implement Bluetooth device pairing and measurement capture
+
+Purpose:
+- build the Caregiver Mobile App flow for pairing a device, capturing a measurement, and confirming upload
+
+Outputs:
+- mobile app feature: device pairing, reading capture, confirmation, and sync to IoT Health Platform
+- integration test covering the measurement upload path
+
+Dependencies:
+- T502
+- T503
+
+Done when:
+- a nurse can pair a supported device, capture a reading, confirm it, and see it reflected in the IoT platform
+
+### T505: Build caregiver dashboard
+
+Purpose:
+- provide nursing staff with a real-time view of the latest vital signs and trends for each active patient
+
+Outputs:
+- dashboard UI showing latest readings, trend charts (7-day, 30-day), and out-of-range highlights per patient
+
+Dependencies:
+- T503
+- T504
+
+Done when:
+- the dashboard reflects newly uploaded readings within the same visit session and highlights threshold violations visually
+
+### T506: Implement threshold configuration model
+
+Purpose:
+- allow authorized nursing staff to configure per-patient thresholds for each measurement type
+
+Outputs:
+- admin interface for threshold configuration
+- per-patient threshold records stored in the IoT Health Platform
+- default threshold values documented and pre-loaded
+
+Dependencies:
+- T503
+
+Done when:
+- a nurse or supervisor can set and save per-patient thresholds, and those thresholds are used in alert evaluation
+
+### T507: Implement threshold alert delivery
+
+Purpose:
+- deliver in-app and out-of-band notifications when a reading violates a threshold
+
+Outputs:
+- in-app push notification triggered by threshold violation
+- SMS or email delivery for critical-severity violations
+- alert event log with delivery status
+
+Dependencies:
+- T503
+- T506
+
+Done when:
+- a test reading outside the threshold produces a push notification within 5 minutes and logs the event
+
+### T508: Implement alert acknowledgment and escalation
+
+Purpose:
+- allow nurses to acknowledge alerts and ensure unacknowledged critical alerts escalate to supervisors
+
+Outputs:
+- acknowledgment flow with annotation support in the caregiver app
+- escalation notification to supervisor after configurable timeout
+- escalation log entries
+
+Dependencies:
+- T507
+
+Done when:
+- acknowledged alerts are logged with annotator identity; unacknowledged critical alerts escalate within the configured timeout
+
+### T509: Build family member portal
+
+Purpose:
+- provide family members with a read-only view of their patient's recent measurements and trend charts
+
+Outputs:
+- web portal with authenticated login for family members
+- per-patient data visibility rule management for nursing staff
+- read-only measurement summary and trend charts
+
+Dependencies:
+- T503
+- T504
+
+Done when:
+- a family member can log in and view approved health data; nursing staff can enable or restrict access per patient
+
+### T510: Build health analytics and reporting module
+
+Purpose:
+- give supervisors and administrators population-level statistics and exportable patient health reports
+
+Outputs:
+- population-level dashboard: average readings, out-of-range rate, measurement compliance rate
+- per-patient report generator (PDF and Excel)
+- filter and drill-down by nurse, patient, time window, and measurement type
+
+Dependencies:
+- T503
+- T504
+
+Done when:
+- a director of nursing can generate a monthly health report for a patient and view clinic-wide compliance statistics
+
+### T511: Break IoT workflows into implementation PRs
+
+Purpose:
+- convert IoT tasks T504–T510 into development-sized PR units
+
+Outputs:
+- PR-ready task list for IoT implementation
+
+Dependencies:
+- T503
+
+Done when:
+- each IoT workflow can be implemented as a sequence of reviewable branches and PRs
+
 ## Suggested First Execution Sequence
 
 1. T001 Confirm active customer scope baseline
@@ -364,9 +538,17 @@ Done when:
 11. T301 Build vendor dependency tracker
 12. T402 Prepare acceptance checklist
 13. T107 and T206 Break both workflows into PR-ready implementation chunks
+14. T501 Resolve IoT scope open questions
+15. T502 T503 Select device vendor and define IoT data model
+16. T504 T505 T506 Implement device pairing, dashboard, and threshold config
+17. T507 T508 Implement alert delivery and escalation
+18. T509 Build family portal
+19. T510 Build health analytics module
+20. T511 Break IoT workflows into implementation PRs
 
 ## Suggested Repo Follow-up
 
 - If desired, split each task into a separate GitHub issue
 - Add owners and target dates once the team confirms responsibility
 - Add a `status` field if this file becomes the active execution board
+- Add `docs/attachments/iot/` directory with device vendor SDK notes once T502 is complete
