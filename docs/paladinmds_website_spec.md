@@ -1,7 +1,7 @@
 # PaladinMDs 網站規格書
 
-> 資料來源：paladinmds.com 公開頁面、搜尋引擎索引內容、PR Newswire 新聞稿（2021）
-> 整理日期：2026-04-30
+> 資料來源：paladinmds.com 公開頁面、搜尋引擎索引內容、PR Newswire 新聞稿、Healthgrades、WebMD、CTSNet、SSRN、Academic Medicine、ReachMD、ZoomInfo、Crunchbase
+> 整理日期：2026-04-30（團隊背景章節更新於 2026-04-30）
 
 ---
 
@@ -25,14 +25,176 @@
 
 ---
 
-## 2. 創辦團隊
+## 2. 創辦團隊與背景
 
-| 姓名 | 職稱 | 背景 |
+### 2.1 Dr. Michael F. Richman, M.D., M.M.M., F.A.C.S., F.C.C.P.
+**職稱：** 共同創辦人 / 首席臨床官（Chief Clinical Officer）
+
+#### 學歷
+
+| 學位 | 機構 | 年份 |
 |------|------|------|
-| Dr. Michael F. Richman, M.D., F.A.C.S., F.C.C.P. | 共同創辦人 / 首席臨床官（CCO） | 雙重認證心胸外科醫師，曾執行逾 1,000 次冠狀動脈繞道手術，USC Marshall 商學院醫療管理碩士（MMM），膽固醇（脂質）領域專家 |
-| Jennifer Martucci | 共同創辦人 / CEO | 連續創業家，Incentient Inc. 創辦人，曾任輝瑞（Pfizer）策略顧問 |
-| Dave Logan | CMA 健康計畫 CEO | 健康計畫領域資深主管 |
-| Ashleigh | 臨床醫師健康與領導力 | 負責臨床照護與領導力發展 |
+| B.S.（理學士） | Georgetown University | 1987 |
+| M.D.（醫學博士） | Georgetown University School of Medicine | 1991 |
+| 一般外科住院醫師（Residency） | USC School of Medicine / LAC-USC | 1991–1996 |
+| 心胸暨血管外科研究員（Fellowship） | Jackson Memorial Hospital, University of Miami | 1997–1999 |
+| M.M.M.（醫療管理碩士） | USC Marshall School of Business | — |
+
+住院醫師期間另獲任命為 USC 醫學院肝膽外科（Hepatobiliary Surgery）**臨床外科講師（Clinical Instructor of Surgery）**。
+
+#### 專科認證與學會資格
+
+| 認證 / 資格 | 授予機構 |
+|------------|---------|
+| 一般外科專科醫師 | American Board of Surgery |
+| 心胸外科專科醫師 | American Board of Thoracic Surgery |
+| F.A.C.S.（美國外科學院院士） | American College of Surgeons |
+| F.C.C.P.（美國胸腔科醫師學院院士） | American College of Chest Physicians |
+
+#### 臨床資歷與成就
+
+- **34 年以上**醫療執業經驗，執業地點：洛杉磯（Brentwood / Beverly Hills），加州
+- 執行**逾 1,000 次冠狀動脈繞道（CABG）手術**
+- 曾被徵召在北加州醫院創立全新心胸外科部門，成為**加州最年輕的心胸外科主任**
+- 2002 年由美國醫療保險和醫療補助服務中心（CMS）認定為**加州最低死亡率醫院**的主治醫師
+- **連續 10 年**獲《洛杉磯雜誌》（LA Magazine）評選為「超級醫師」（Super Doctor）
+
+#### 媒體與公眾影響力
+
+| 媒介 | 角色 |
+|------|------|
+| WebMD | 膽固醇專家顧問（2005–2012）；現為 WebMD Medical Review Board 成員 |
+| The Examiner.com | 全國心臟健康專欄作者（National Heart Health Examiner） |
+| KRLA 870 AM（The Answer）—《Dennis Prager Show》 | 特邀健康顧問（Health Advisor），多次上節目 |
+| Pragertopia（Dennis Prager Show Podcast） | 長篇對話首位特邀嘉賓 |
+| 全國及地方電視台 | 多次心臟健康主題專訪露出 |
+
+#### 創辦的醫療機構
+
+| 機構名稱 | 成立時間 | 定位 |
+|----------|----------|------|
+| **The Center for Cholesterol Management**（lipidcenter.com） | 2005 年 8 月 | 南加州唯一獨立提供 NMR-based 脂蛋白檢測的機構；多學科團隊（醫師、護士、營養師、物理治療師）；接受所有保險含 Medicare/Medicaid |
+| **The Elite Laser Vein Center**（elitevein.com） | 2006 年底 | 靜脈疾病治療，Beverly Hills 及洛杉磯兩處據點；執行逾 500 次靜脈內雷射消融術（EVLA），為洛杉磯少數能執行此術式的外科醫師之一 |
+| **PaladinMDs**（paladinmds.com） | 2021 年 1 月 | 醫療倡權與個人化醫療顧問平台（本規格書主題） |
+
+---
+
+### 2.2 Jennifer Martucci
+**職稱：** 共同創辦人 / 執行長（CEO）
+
+#### 學歷
+
+| 學位 | 機構 |
+|------|------|
+| 學士 | Stony Brook University |
+
+#### 職業經歷
+
+| 期間 | 職位 / 機構 | 主要成就 |
+|------|------------|---------|
+| 2001–2006 | CEO，GPSTracks, LLC | 創立寵物衛星追蹤設備新創公司；獲得 **27 項技術專利 + 2 項方法專利**；五年內由 Fortune 50 企業策略性收購 |
+| 2006–現在 | 策略顧問 | 曾任**輝瑞（Pfizer）策略顧問** |
+| 2008–現在 | President & Co-Founder / CEO，Incentient, LLC | 開創互動式數位賓客科技（Interactive Digital Guest Technology）；產品部署於 **27 個國家**；取得 **Apple 解決方案夥伴**資格 |
+| 2021–現在 | 共同創辦人 / CEO，PaladinMDs | 因應 COVID-19 疫情對醫療系統的衝擊而共同創立 |
+
+---
+
+### 2.3 Dave Logan, Ph.D.
+**職稱：** CMA 健康計畫執行長（CEO, CMA Wellness Services）
+
+#### 學歷
+
+| 學位 | 機構 |
+|------|------|
+| 組織傳播學博士（Ph.D. in Organizational Communication） | Annenberg School, University of Southern California |
+
+#### 職業經歷
+
+| 期間 | 職位 / 機構 | 主要成就 |
+|------|------------|---------|
+| 2001–2004 | 副院長暨高管教育執行主任，USC Marshall 商學院 | 主導新設**醫療管理碩士（M.M.M.）**及管理碩士（Master of Management）兩個學位學程 |
+| 現在 | 資深講師，USC Marshall 商學院（管理與組織系） | 研究主題：組織對齊、文化、策略、領導力、組織設計 |
+| 2018 前 | 共同創辦人，CultureSync 管理顧問公司 | 服務數十間 Fortune 500 企業、大型非營利機構及政府機關；2018 年出售多數股份轉型投入醫療改革 |
+| — | 首席創新官 / 首席轉型官，P3 Health Partners | 聚焦醫師參與及執業轉型 |
+| 現在 | CEO，CMA Wellness Services（加州醫師公會 + 史丹佛大學聯合計畫） | 以**終結醫師職業倦怠（Physician Burnout）流行病**為核心使命 |
+
+#### 著作與學術發表
+
+| 著作 | 出版/發表 |
+|------|----------|
+| *Tribal Leadership: Leveraging Natural Groups to Build a Thriving Organization* | Harper Collins |
+| "Well Leaders Lead Well: How to Create and Sustain a Culture of Wellness During COVID-19 and Beyond"（合著：Ashleigh Rodriguez） | SSRN, 2020 |
+| "Wellness-Centered Leadership: Equipping Health Care Leaders to Cultivate Physician Well-Being and Professional Fulfillment"（合著：Rodriguez, Trockel, Shanafelt 等） | *Academic Medicine*, 2021 |
+
+---
+
+### 2.4 Ashleigh Rodriguez, M.S.N., M.M.M.
+**職稱：** 臨床醫師健康與領導力（Clinician Wellness and Leadership）
+
+#### 學歷
+
+| 學位 | 機構 | 備註 |
+|------|------|------|
+| 護理科學碩士（M.S.N.） | — | 起點職涯：治療嚴重心肺疾病患者的臨床護理師 |
+| 醫療管理碩士（M.M.M.） | USC Marshall School of Business | **畢業成績全班第一** |
+
+#### 職業經歷
+
+| 角色 | 機構 | 主要成就 |
+|------|------|---------|
+| 顧問 | CMA Wellness Services（加州醫師公會） | 設計並執行對臨床醫師有意義的健康支援計畫 |
+| 核心協作者 | **Care 4 Caregivers Now** | COVID-19 期間為面臨心理壓力的臨床醫師打造同儕教練支援計畫；獲多家全國性新聞媒體報導 |
+| 講師 | University of Arizona | 領導力課程教學 |
+| 講師 | University of Southern California | 領導力課程教學 |
+| 客座講師 | USC Price School of Public Policy | 公共衛生政策與領導力 |
+
+#### 著作與學術發表
+
+| 著作 | 出版/發表 |
+|------|----------|
+| "Well Leaders Lead Well"（合著：Dave Logan） | SSRN, 2020 |
+| "Wellness-Centered Leadership: Equipping Health Care Leaders to Cultivate Physician Well-Being and Professional Fulfillment"（合著：Logan, Trockel, Shanafelt 等） | *Academic Medicine*, 2021 |
+| 多篇醫師健康相關論文（合著，部分 in-press） | 與頂尖學術機構教授共同撰寫 |
+
+---
+
+## 2.5 醫學服務基礎（醫療機構生態系）
+
+PaladinMDs 並非憑空創立，而是建立在創辦人長期深耕的三個醫療機構之上，形成完整的預防性心血管照護生態圈。
+
+```
+The Center for Cholesterol Management (2005)
+         ↓ 脂質管理專業知識
+The Elite Laser Vein Center (2006)
+         ↓ 心血管預防延伸至靜脈疾病
+PaladinMDs (2021)
+         ↓ 整合倡權、協調、轉介的醫療平台
+```
+
+### The Center for Cholesterol Management
+
+| 項目 | 說明 |
+|------|------|
+| 網址 | lipidcenter.com |
+| 成立 | 2005 年 8 月 |
+| 核心定位 | 加州南部**唯一獨立**提供 NMR-based 脂蛋白分析的機構 |
+| 團隊組成 | 醫師、護士、營養師、物理治療師（多學科模式） |
+| 核心技術 | NMR LipoProfile®：同時提供傳統脂質數值 + 動脈粥樣硬化顆粒數量，對冠心病風險的預測力優於傳統膽固醇檢測 |
+| 適用族群 | 有心血管風險因子、傳統膽固醇數值正常但仍有風險的患者 |
+| 保險給付 | 接受所有保險，含 Medicare 及 Medicaid |
+| 諮詢費用 | $300 |
+| 流程 | 電話預約 → 血液檢查 → 電話報告解讀 + 治療建議 |
+
+### The Elite Laser Vein Center
+
+| 項目 | 說明 |
+|------|------|
+| 網址 | elitevein.com |
+| 成立 | 2006 年底 |
+| 據點 | Beverly Hills、洛杉磯 |
+| 核心技術 | 靜脈內雷射消融術（EVLA, Endovenous Laser Ablation）—為洛杉磯地區少數能執行此術式的外科醫師 |
+| 執行量 | 逾 500 次 EVLA 手術 |
+| 定位 | 靜脈疾病（Venous Disease）的尖端微創治療 |
 
 ---
 
